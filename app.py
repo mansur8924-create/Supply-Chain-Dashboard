@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# --- Setup ---
+# --- Configuration and Styling ---
 st.set_page_config(page_title="Warehouse Dashboard", layout="wide", initial_sidebar_state="expanded")
 
 st.markdown("""
@@ -30,7 +30,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- Data ---
+# --- Data Loading ---
 @st.cache_data
 def load_data():
     df = pd.read_csv('Electronic_Sales.csv')
@@ -42,14 +42,14 @@ df = load_data()
 
 # --- Sidebar ---
 with st.sidebar:
-    st.title("⚙️ Filters")
+    st.title("Filters")
     city_filter = st.multiselect("Pick a city to check:", options=sorted(df['City'].unique()), default=df['City'].unique())
 
 filtered_df = df[df['City'].isin(city_filter)]
 
 # --- Header ---
-st.title("📦 Warehouse & Shipping Overview")
-st.markdown("<p style='color: #8A929A;'>Checking in on how fast we're moving stock and where the bottlenecks are.</p>", unsafe_allow_html=True)
+st.title("Warehouse and Shipping Overview")
+st.markdown("<p style='color: #8A929A;'>Checking in on how fast we are moving stock and where the bottlenecks are.</p>", unsafe_allow_html=True)
 st.markdown("---")
 
 # --- Stats ---
@@ -105,22 +105,22 @@ with r2_c2:
 
 # --- Human Recommendations ---
 st.markdown("---")
-st.subheader("📝 My Thoughts & Recommendations")
+st.subheader("My Thoughts and Recommendations")
 s1, s2, s3 = st.columns(3)
 
 with s1:
     st.markdown("""<div class="strategy-card" style="border-top-color: #4DA8DA;">
         <h4>The Holiday Rush</h4>
         <p><span class="tag" style="background-color: #4DA8DA22; color: #4DA8DA;">WHAT I SEE</span> Shipping goes crazy in Nov and Dec.</p>
-        <p><span class="tag" style="background-color: #E74C3C22; color: #E74C3C;">WHY IT MATTERS</span> If we don't prep, our staff will burn out and orders will be late.</p>
-        <p><b>ACTION:</b> Let's get our seasonal hires trained by mid-October so they're ready to go.</p>
+        <p><span class="tag" style="background-color: #E74C3C22; color: #E74C3C;">WHY IT MATTERS</span> If we do not prep, our staff will burn out and orders will be late.</p>
+        <p><b>ACTION:</b> Let us get our seasonal hires trained by mid-October so they are ready to go.</p>
     </div>""", unsafe_allow_html=True)
 
 with s2:
     st.markdown("""<div class="strategy-card" style="border-top-color: #E67E22;">
         <h4>Keep Batteries in Stock</h4>
         <p><span class="tag" style="background-color: #E67E2222; color: #E67E22;">WHAT I SEE</span> Batteries and cables are our #1 sellers by volume.</p>
-        <p><span class="tag" style="background-color: #E74C3C22; color: #E74C3C;">WHY IT MATTERS</span> People add these to big orders. If we're out, they might go to a competitor.</p>
+        <p><span class="tag" style="background-color: #E74C3C22; color: #E74C3C;">WHY IT MATTERS</span> People add these to big orders. If we are out, they might go to a competitor.</p>
         <p><b>ACTION:</b> Set an auto-reorder for AAA batteries the moment we dip below 3 weeks of stock.</p>
     </div>""", unsafe_allow_html=True)
 
@@ -128,6 +128,6 @@ with s3:
     st.markdown("""<div class="strategy-card" style="border-top-color: #9B59B6;">
         <h4>Shift Timing</h4>
         <p><span class="tag" style="background-color: #9B59B622; color: #9B59B6;">WHAT I SEE</span> Orders spike at lunch (12pm) and right after work (7pm).</p>
-        <p><span class="tag" style="background-color: #E74C3C22; color: #E74C3C;">WHY IT MATTERS</span> That's when we get the biggest backlog.</p>
-        <p><b>ACTION:</b> Let's stagger lunch breaks so we have the most people on the floor during those two windows.</p>
+        <p><span class="tag" style="background-color: #E74C3C22; color: #E74C3C;">WHY IT MATTERS</span> That is when we get the biggest backlog.</p>
+        <p><b>ACTION:</b> Let us stagger lunch breaks so we have the most people on the floor during those two windows.</p>
     </div>""", unsafe_allow_html=True)

@@ -1,9 +1,9 @@
 #  Aura Electronics: Warehouse & Shipping Dashboard
 
-### **What is this?**
+### What is this?
 I built this interactive tool to help **Aura Electronics** figure out where their warehouse is getting stuck and how to handle their busiest seasons. Instead of just looking at spreadsheets, this dashboard lets you filter by city and see exactly how fast products are moving in real-time.
 
-### **The Tools I Used**
+### The Tools I Used
 * **Python** (The engine)
 * **Streamlit** (To turn the code into a clean web app)
 * **Pandas** (To clean and organize the messy sales data)
@@ -11,7 +11,7 @@ I built this interactive tool to help **Aura Electronics** figure out where thei
 
 ---
 
-### ** What I Discovered **
+###  What I Discovered 
 After digging into the data, I found three major things that the business needs to act on:
 
 1.  **The Holiday Rush is Real:** Shipping goes crazy in November and December. My advice? Get all seasonal hiring and training done by **mid-October** so the team isn't overwhelmed when the rush hits.
@@ -20,7 +20,7 @@ After digging into the data, I found three major things that the business needs 
 
 ---
 
-### ** Want to run it yourself?**
+### Want to run it yourself?
 1.  Clone the repo.
 2.  Install the requirements:  
     `pip install -r requirements.txt`

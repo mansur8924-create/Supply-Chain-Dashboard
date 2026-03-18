@@ -1,4 +1,5 @@
 Aura Electronics: Warehouse & Shipping Dashboard
+
 What is this?
 I built this interactive tool to help Aura Electronics figure out where their warehouse is getting stuck and how to handle their busiest seasons. Instead of just looking at spreadsheets, this dashboard lets you filter by city and see exactly how fast products are moving in real-time.
 

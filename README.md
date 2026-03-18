@@ -1,26 +1,27 @@
-# Aura Electronics: Supply Chain & Fulfillment Dashboard
+Aura Electronics: Warehouse & Shipping Dashboard
+What is this?
+I built this interactive tool to help Aura Electronics figure out where their warehouse is getting stuck and how to handle their busiest seasons. Instead of just looking at spreadsheets, this dashboard lets you filter by city and see exactly how fast products are moving in real-time.
 
-##  Strategic Objective
-A dynamic, interactive web application built to monitor outbound inventory velocity, regional market distribution, and operational bottlenecks for Aura Electronics. Designed for executive stakeholders to make data-driven decisions regarding Q4 surge capacity and inventory replenishment.
+The Tools I Used
+Python (The engine)
 
-##  Tech Stack
-* **Language:** Python 3.x
-* **Framework:** Streamlit (Interactive UI & Web Hosting)
-* **Data Manipulation:** Pandas
-* **Data Visualization:** Plotly Express
+Streamlit (To turn the code into a clean web app)
 
-##  Key Features & Interactive Elements
-* **Executive KPI Matrix:** Real-time calculation of total units shipped, highest velocity SKUs, and average order sizes based on active market filters.
-* **Dynamic Regional Filtering:** A global control panel allowing stakeholders to isolate and analyze specific geographic markets (e.g., assessing the San Francisco phenomena vs. secondary markets).
-* **Fulfillment Cycle Analysis:** Area charting of intra-day order processing to identify warehouse scheduling bottlenecks.
-* **Hierarchical Market Distribution:** Treemap visualization of regional freight allocation.
+Pandas (To clean and organize the messy sales data)
 
-##  Lead Analyst Strategic Imperatives
-1. **Surge Capacity Planning:** Identified a massive outbound spike in Q4 (Nov-Dec). Recommended freezing non-essential warehouse restructuring and securing seasonal labor by Oct 15th to prevent 3PL carrier rejection.
-2. **SKU Velocity Replenishment:** Identified low-margin staples (batteries, cables) as the highest volume movers. Recommended automated ERP re-ordering thresholds to prevent stockouts that block high-margin add-on sales.
-3. **Intra-Day Shift Optimization:** Identified bi-modal order ingestion spikes (12:00 PM and 7:00 PM). Recommended staggering warehouse picker shift-starts to align maximum headcount with peak processing hours.
+Plotly (To make the charts interactive and easy to read)
+ What I Discovered (The "So What?")
+After digging into the data, I found three major things that the business needs to act on:
 
-##  How to Run Locally
-1. Clone this repository.
-2. Install the required dependencies: `pip install -r requirements.txt`
-3. Launch the dashboard: `python -m streamlit run app.py`git init
+The Holiday Rush is Real: Shipping goes crazy in November and December. My advice? Get all seasonal hiring and training done by mid-October so the team isn't overwhelmed when the rush hits.
+
+Batteries are the Secret MVP: Even though they’re cheap, batteries and cables are our #1 sellers by volume. If we run out, customers might abandon their entire cart. I recommended an automated re-order system so we never hit zero.
+
+The Lunch & Dinner Spikes: Orders predictably spike at 12 PM and 7 PM. To keep things moving, we should stagger warehouse shifts so we have the most people on the floor during those exact windows.
+
+Want to run it yourself?
+Clone the repo.
+
+Install the requirements: pip install -r requirements.txt
+
+Launch the app: python -m streamlit run app.py
